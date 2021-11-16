@@ -36,6 +36,21 @@
         "sourceTemplate": {
             "id": "ui5template.smartTemplate",
             "version": "1.40.12"
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "nithesh-fe-demo-list-external-foodandbev-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "external",
+                    "action": "display",
+                    "title": "Food & Bevarages",
+                    "subTitle": "",
+                    "icon": ""
+                }
+            }
         }
     },
     "sap.ui": {
@@ -96,7 +111,6 @@
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/ObjectPage/Products/i18n.properties"
             },
-            
             "": {
                 "dataSource": "mainService",
                 "preload": true,
@@ -111,7 +125,11 @@
             }
         },
         "extends": {
-            "extensions": {}
+            "extensions": {
+                "sap.ui.viewExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {}
+                }
+            }
         },
         "contentDensities": {
             "compact": true,
@@ -134,12 +152,21 @@
                     "list": true,
                     "settings": {
                         "condensedTableLayout": true,
-                        "smartVariantManagement": true,
+                        "smartVariantManagement": false,
                         "enableTableFilterInPageVariant": true,
                         "filterSettings": {
                             "dateSettings": {
                                 "useDateRange": true
                             }
+                        },
+                        "gridTable": false,
+                        "tableSettings": {
+                            "selectAll": true,
+                            "multiSelect": true,
+                            "selectionLimit": 200
+                        },
+                        "dataLoadSettings": {
+                            "loadDataOnAppLaunch": "ifAnyFilterExist"
                         }
                     }
                 },
@@ -164,5 +191,9 @@
     },
     "sap.platform.hcp": {
         "uri": ""
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "nithesh-fe-demo-list-external-foodandbev"
     }
 }

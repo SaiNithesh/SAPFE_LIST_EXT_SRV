@@ -8,3 +8,23 @@ mta-*
 resources
 archive.zip
 .*_mta_build_tmp
+# auto generated wildcard
+northwindcapservice/.env1
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
+# auto generated wildcard
+capfe/gen/db/.env
